@@ -1,29 +1,28 @@
 package org.implementations;
 
 import java.util.Arrays;
-import java.util.HashSet;
+import java.util.HashMap;
 
 public class Leetcode1 {
 	public static void main(String[] args) {
-		int[] numbers = new int[] { 1, 2, 3, 3, 4, 4 };
-		System.out.println(Arrays.toString(twoSum(numbers, 7)));
+		int[] numbers = new int[] { 5,7,1,3,8};
+		System.out.println(Arrays.toString(twoSum(numbers, 8)));
 	}
 
 	public static int[] twoSum(int[] nums, int target) {
-		if (nums.length == 2)
-			return nums;
-		int firstPointer = 0;
-		int secondPointer = nums.length - 1;
+		HashMap<Integer, Integer> integerIntegerHashMap = new HashMap<>();
 
-		while (firstPointer < secondPointer) {
-			if (nums[firstPointer] + nums[secondPointer] == target) {
-				return new int[] { firstPointer, secondPointer };
+		for (int i = 0; i < nums.length; i++) {
+			int difference = target - nums[i];
+			if (integerIntegerHashMap.containsKey(difference)) {
+				return new int[] { integerIntegerHashMap.get(difference), i };
+
+			} else {
+				integerIntegerHashMap.put(nums[i], i);
 			}
-			firstPointer++;
-			secondPointer--;
 
 		}
-		return null;
+		return new int[0];
 	}
 
 }
