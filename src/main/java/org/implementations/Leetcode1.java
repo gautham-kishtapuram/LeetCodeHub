@@ -2,7 +2,7 @@ package org.implementations;
 
 import java.util.Arrays;
 import java.util.HashMap;
-
+// https://leetcode.com/problems/two-sum/
 public class Leetcode1 {
 	public static void main(String[] args) {
 		int[] numbers = new int[] { 5,7,1,3,8};
