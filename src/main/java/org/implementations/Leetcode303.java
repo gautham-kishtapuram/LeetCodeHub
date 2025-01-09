@@ -1,4 +1,5 @@
 package org.implementations;
+
 // https://leetcode.com/problems/range-sum-query-immutable/submissions/1502137122/
 public class Leetcode303 {
 
